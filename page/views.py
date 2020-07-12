@@ -1,10 +1,10 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, get_object_or_404
 from .models import Designer
 
 # Create your views here.
 def home(request):
     designers = Designer.objects.all()
-    return render(request, 'home.html', {'designer': designers})
+    return render(request, 'home.html', {'designers' : designers})
 
 def introduce(request):
     return render(request, 'introduce.html')
